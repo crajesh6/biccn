@@ -1,1 +1,1 @@
-# biccn
+# Code for BICCN analysis
