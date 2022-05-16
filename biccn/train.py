@@ -17,8 +17,8 @@ from biccn.model_zoo import residualbind
 # ==============================================================================
 # Paths
 # ==============================================================================
-DATA_DIR = "/home/chandana/projects/biccn/data"
-SAVE_DIR = "/home/chandana/projects/biccn/models"
+DATA_DIR = "./biccn/data"
+SAVE_DIR = "./biccn/models"
 
 
 # ==============================================================================
@@ -90,7 +90,7 @@ def main(trial_name: str):
         ("test", [1, 3, 5])
     ]
 
-    save = False
+    save = True # set to False if TFrecords already made
 
     datasets = {}
 

@@ -19,9 +19,9 @@ from biccn.model_zoo import residualbind, remainder
 # Paths
 # ==============================================================================
 
-DATA_DIR = "/home/chandana/projects/biccn/data"
-SAVE_DIR = "/home/chandana/projects/biccn/results"
-MODEL_DIR = "/home/chandana/projects/biccn/models"
+DATA_DIR = "./biccn/data"
+SAVE_DIR = "./biccn/data/results"
+MODEL_DIR = "./biccn/models"
 
 
 AUTO = tf.data.experimental.AUTOTUNE

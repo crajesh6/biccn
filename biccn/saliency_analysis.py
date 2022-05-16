@@ -62,11 +62,11 @@ AUTO = tf.data.experimental.AUTOTUNE
 THRESHOLD = 0.0006867924257022952
 BATCH_SIZE = 128
 
-DATA_DIR = "data"
+DATA_DIR = "./biccn/data"
 
 test_ds = WindowedGenomeDataset(
-    target_path="data/targets.bed",
-    fasta_path="data/GRCm38.fa",
+    target_path=DATA_DIR + "/targets.bed",
+    fasta_path=DATA_DIR + "/GRCm38.fa",
     chromosomes=[f"chr{i}" for i in [1, 3, 5]],
     window_size=999,
     dtype=np.float32
@@ -98,7 +98,7 @@ model.compile(
         tf.keras.metrics.AUC(curve="PR", name="aupr")
     ]
 )
-model.load_weights('models/resbind_weights_2.0.h5')
+model.load_weights('./models/resbind_weights_2.0.h5')
 
 
 print("Model creation complete.")

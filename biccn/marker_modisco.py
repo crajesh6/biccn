@@ -25,9 +25,9 @@ from biccn.model_zoo import residualbind
 # ==============================================================================
 # Paths/Constants
 # ==============================================================================
-DATA_DIR = "/home/chandana/projects/biccn/data"
-MODEL_DIR = "/home/chandana/projects/biccn/models"
-SAVE_DIR = "/home/chandana/projects/biccn/results"
+DATA_DIR = "./biccn/data"
+MODEL_DIR = "./biccn/models"
+SAVE_DIR = "./biccn/results"
 AUTO = tf.data.experimental.AUTOTUNE
 THRESHOLD = 0.01
 BATCH_SIZE = 128
@@ -297,7 +297,7 @@ def main(trial_name: str, marker: str, model_weights: str, rc: bool):
     # Save attribution scores to h5 file
     # ==============================================================================
     print("Saving Selected Attribution Scores...")
-    
+
     scores_file = os.path.join(SAVE_PATH, f"{marker}_sampled_scores.h5")
     if (os.path.isfile(scores_file)):
         cmd = 'rm ' + scores_file
