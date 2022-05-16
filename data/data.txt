@@ -1,0 +1,2 @@
+wget https://www.dropbox.com/s/i8623rhdnxt95r2/targets.bed <-- target path
+wget https://www.dropbox.com/s/vjcr3z0gx6u8cy9/GRCm38.fa <-- reference genome
